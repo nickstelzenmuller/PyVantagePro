@@ -94,7 +94,7 @@ def update_cmd(args, vp):
     # create file if not exist
     with open(args.db, 'a'):
         os.utime(args.db, None)
-    with open(args.db, 'r+a') as file_db:
+    with open(args.db, 'r+') as file_db:
         db = csv_to_dict(file_db, delimiter=args.delim)
         args.start = None
         args.stop = None
