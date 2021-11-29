@@ -92,7 +92,7 @@ def getarchives_cmd(args, vp):
 def update_cmd(args, vp):
     '''Update command.'''
     # create file if not exist
-    with file(args.db, 'a'):
+    with open(args.db, 'a'):
         os.utime(args.db, None)
     with open(args.db, 'r+a') as file_db:
         db = csv_to_dict(file_db, delimiter=args.delim)
